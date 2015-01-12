@@ -10,6 +10,6 @@ git clone -b ${MONGO_RELEASE} ${MONGO_REPO} ${SRC_DIR}
 
 pushd ${SRC_DIR}
 
-scons SConstruct --64 --ssl -j${NCPU} --no-glibc-check --prefix=/usr/local
+scons all --64 --ssl -j${NCPU} --no-glibc-check --disable-warnings-as-errors --prefix=/usr/local
 
 popd
